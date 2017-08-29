@@ -11,7 +11,7 @@ export default class ModalBox extends React.Component {
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
                 <div className="modal-header">
-                    <h5 className="modal-title">Verify your identify.</h5>
+                    <h5 className="modal-title text-center w-100">Verify your identify.</h5>
                     {/*<button type="button" className="close" data-dismiss="modal" aria-label="Close">*/}
                     {/*<span aria-hidden="true">&times;</span>*/}
                     {/*</button>*/}
