@@ -34,7 +34,7 @@ class Clock extends React.Component {
     render() {
       return (
         <div className="container">
-            <div className="div-logo">
+            <div className="div-logo mt-0">
                 <img className="index-logo" src={logo} alt="logo" />
             </div>
             <div className="text-center">
