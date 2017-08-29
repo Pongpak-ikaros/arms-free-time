@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
 import './index.css';
-import ModalBox from './modal.js';
-// import $ from 'jquery'; 
 
 class Clock extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = {date: new Date()};
-    //   this.ModalBox = this.ModalBox.bind(this);
-    //   this.textBox = this.textBox.bind(this);
+        super(props);
+        this.setTimeEnter = this.setTimeEnter.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.state = {
+            date: new Date() , 
+            time_enter: 0,
+            value: ''
+        };
     }
   
     componentDidMount() {
@@ -29,37 +31,54 @@ class Clock extends React.Component {
       });
     }
 
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    setTimeEnter(){
+       if(this.state.value.length > 0){
+            this.setState({
+                time_enter:this.state.date.toLocaleTimeString()
+            });
+            // ReactDOM.render(
+                // <ModalBox onShow/>
+            // );    
+       } else {
+        //    document.getElementById('modal').innerHTML = '';
+       }
+    }
     CompanyLogo(){
         
     }
 
     render() {
+      const timeEnter = this.state.date.toLocaleDateString();  
       return (
         <div className="container mb-5">
             <div className="mb-5">
                 <img src="img/arms-logo.png"/>
             </div>
             <div className="text-center mb-5">
-                <h2>
-                    <ModalBox/>
+                <h3>          
                     { this.state.date.toDateString() }
-                    &nbsp;&nbsp;
-                    { this.state.date.toLocaleTimeString() } 
-                </h2></div>
-            <input type="text"  className="form-control mb-2" placeholder="Enter Fast Code"/> 
+                </h3>
+                <h3>
+                { this.state.date.toLocaleTimeString() }    
+                </h3></div>
+            <input type="text"  value={this.state.value} onChange={this.handleChange} className="form-control mb-2" placeholder="Enter Fast Code"/> 
             {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Launch demo modal
             </button> */}
-            <button type="button" className="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">Fast Checkin</button>
+            <button type="button" className="btn btn-primary btn-block" 
+            onClick={this.setTimeEnter}>Fast Check-in</button>
         
         </div>
       );
     }
-
   }
   
-
-  ReactDOM.render(
+  
+ReactDOM.render(
     <Clock/>,
     document.getElementById('root')
   );
