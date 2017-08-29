@@ -8,7 +8,8 @@ class Clock extends React.Component {
     constructor(props) {
       super(props);
       this.state = {date: new Date()};
-    //   this.loginAuthen = this.loginAuthen.bind(this);
+    //   this.ModalBox = this.ModalBox.bind(this);
+    //   this.textBox = this.textBox.bind(this);
     }
   
     componentDidMount() {
@@ -28,12 +29,17 @@ class Clock extends React.Component {
       });
     }
 
+    CompanyLogo(){
+        
+    }
 
-  
     render() {
       return (
-        <div className="container">
-            <div className="text-center">
+        <div className="container mb-5">
+            <div className="mb-5">
+                <img src="img/arms-logo.png"/>
+            </div>
+            <div className="text-center mb-5">
                 <h2>
                     <ModalBox/>
                     { this.state.date.toDateString() }

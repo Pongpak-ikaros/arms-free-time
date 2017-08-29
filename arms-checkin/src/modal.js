@@ -10,7 +10,7 @@ export default class ModalBox extends React.Component {
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
                 <div className="modal-header">
-                    <h5 className="modal-title">Modal title</h5>
+                    <h5 className="modal-title w-100 text-center">Modal title</h5>
                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -26,6 +26,10 @@ export default class ModalBox extends React.Component {
             </div>
             </div>
         );
+    }
+
+    static Box(){
+        alert('TEST');
     }
 }
 
