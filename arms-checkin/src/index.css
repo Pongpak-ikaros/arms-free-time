@@ -64,4 +64,23 @@ body {
     margin-left: -100px;
     color:#FFFFFF;
 }
+
+.index-logo{
+    top: 0;
+    width: 15rem;
+    height: 10rem;
+}
+.div-logo {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    left: 0;
+    top: 40px;
+    position: fixed;
+}
+
+.profile {
+    width: 24vh;
+    height: 24vh;
+}
   

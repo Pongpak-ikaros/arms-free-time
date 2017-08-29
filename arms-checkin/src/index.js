@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM  from 'react-dom';
 import './index.css';
 import ModalBox from './modal.js';
-// import $ from 'jquery'; 
+// import $ from 'jquery';
+import logo from './img/Artboard 2@2x.png';
 
 class Clock extends React.Component {
     constructor(props) {
@@ -33,6 +34,9 @@ class Clock extends React.Component {
     render() {
       return (
         <div className="container">
+            <div className="div-logo">
+                <img className="index-logo" src={logo} alt="logo" />
+            </div>
             <div className="text-center">
                 <h2>
                     <ModalBox/>
