@@ -1,0 +1,23 @@
+
+@media screen and (max-width: 575px){
+
+    .container{
+        border-radius: 3px;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        border-radius: 3px;
+        padding:10px;
+        width:50%;
+        height: 100%;
+    }
+
+}
+
+.header-logo{
+    width: 100%;
+}
