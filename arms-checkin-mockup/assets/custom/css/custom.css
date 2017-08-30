@@ -21,3 +21,19 @@
 .header-logo{
     width: 100%;
 }
+
+.show-date-time{
+
+}
+
+.show-date-time > div{
+    width: 100%;
+    text-align: center;
+}
+
+#date-part {
+    font-size: 1.2em;
+}
+#time-part {
+    font-size: 3em;
+}
