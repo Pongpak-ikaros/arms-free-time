@@ -48,3 +48,18 @@
     width: 20vh;
     height: 20vh;
 }
+
+
+.rope {
+    /*width: 393px;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: aquamarine;
+}
+.box {
+    height: 100px;
+    width: 100px;
+    margin: 15px;
+    background: red;
+}
