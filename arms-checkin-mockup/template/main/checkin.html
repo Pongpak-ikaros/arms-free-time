@@ -1,5 +1,7 @@
  <div class="w-100">
-    <div id="show-date-time"></div>
+    <div id="show-date-time">
+
+    </div>
     <form>
         <div class="form-group">
             <label for="fastcode">FAST CODE</label>
@@ -13,9 +15,9 @@
  <script>
      $(document).ready(function () {
          var interval = setInterval(function () {
-             
-         })
-         
+             var momentNow = moment();
+
+         },1000)
      })
 
  </script>
