@@ -1,7 +1,9 @@
 $(document).ready(function(){
-
     if($('#page_name').length){
-        var page = $('#page_name').attr('name');
+        if(sessionStorage.getItem('page_name') != null){
+            setPageName(sessionStorage.getItem('page_name'));
+        }
+        var page = $('#page_name').attr('name');        
         if($.trim(page) < 1){
             changePage('main/checkin');
         } else {
@@ -12,9 +14,14 @@ $(document).ready(function(){
 
 function changePage(page){
     $('#root').load('../template/'+page+'.html');
-    setPage(page);
+    setPageName(page);
+    saveStorage(page);    
 }
 
-function setPage(page){
+function setPageName(page){
     $('#page_name').attr('name',page);
+}
+
+function saveStorage(page){
+    sessionStorage.setItem('page_name',page);    
 }

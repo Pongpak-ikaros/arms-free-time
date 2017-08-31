@@ -23,12 +23,13 @@
 <!--</div>-->
 <script>
     $(document).ready(function () {
-        $('body').on('click','#but_checkin',function(e){
-           $('#loginModal').modal('hide');
-           $('#loginModal').on('hidden.bs.modal', function (e) {
-            changePage('main/checkin_success'); 
-           })
-          
-        });
+        if(sessionStorage.getItem('page_name') == 'main/checkin'){
+            $('body').on('click','#but_checkin',function(e){
+                $('#loginModal').modal('hide');
+                $('#loginModal').on('hidden.bs.modal', function (e) {
+                changePage('main/checkin_success'); 
+                })
+            });
+        }
     });
 </script>
