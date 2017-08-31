@@ -55,11 +55,11 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    background-color: aquamarine;
+    background-color: #CCCCCC;
 }
 .box {
-    height: 100px;
-    width: 100px;
+    /*height: 100px;*/
+    /*width: 100px;*/
     margin: 15px;
-    background: red;
+    /*background: red;*/
 }
