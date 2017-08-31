@@ -15,9 +15,20 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Check In</button>
+                <button type="button" id="but_checkin" class="btn btn-primary">Check In</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 <!--</div>-->
+<script>
+    $(document).ready(function () {
+        $('body').on('click','#but_checkin',function(e){
+           $('#loginModal').modal('hide');
+           $('#loginModal').on('hidden.bs.modal', function (e) {
+            changePage('main/checkin_success'); 
+           })
+          
+        });
+    });
+</script>

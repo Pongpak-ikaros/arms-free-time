@@ -1,3 +1,7 @@
+<div id="page_checkin"></div>
+<div class="align-se header">
+    <img class="header-logo" src="../assets/public/img/arms-logo.png">
+</div>
  <div class="w-100">
     <div class="show-date-time">
         <div id="date-part">2017-08-30 WED</div>
@@ -12,13 +16,12 @@
             </div>
             <small id="fastcodeHelp" class="form-text text-muted">Please Insert only 4 digit</small>
         </div>
-        <button type="button" id="submit" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">Check In</button>
+        <button type="button" id="modal" class="btn btn-primary btn-block">Check In</button>
     </form>
  </div>
 
  <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
-
+ <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"  aria-hidden="true"></div>
  <script>
      $(document).ready(function () {
          var interval = setInterval(function () {
@@ -33,6 +36,7 @@
      });
 
      $(function () {
-         $("#exampleModal").load("./main/checkin_modal.html");
+         $("#loginModal").load("./main/checkin_modal.html");
      });
  </script>
+ 
