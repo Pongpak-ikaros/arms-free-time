@@ -27,6 +27,7 @@
     $(document).ready(function () {
         if(sessionStorage.getItem('page_name') == 'main/checkin'){
             $('body').on('click','#but_checkin_modal',function(e){
+                sessionStorage.setItem('time_enter',moment().format('YYYY-MM-DD HH:mm:ss'));
                 $('#loginModal').modal('hide');
                 $('#loginModal').on('hidden.bs.modal', function (e) {
                 changePage('main/reason'); 

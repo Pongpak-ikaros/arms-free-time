@@ -71,12 +71,13 @@
         <button type="button" id="but_checkout" class="btn btn-sm btn-warning btn-block" style="display: none">CHECK-OUT</button>
     </div>
 </div>
-<div class="w-100 text-right pt-2"><h4>MON 2017-08-24 09.59</h4></div>
+<div class="w-100 text-right pt-2"><h4 id="reason_time_enter">MON 2017-08-24</h4></div>
 
 
 <script>
 $(document).ready(function(){
     if(sessionStorage.getItem('page_name') == 'main/reason'){
+        $('#reason_time_enter').html(sessionStorage.getItem('time_enter'));
         var check_status = sessionStorage.getItem('chk_status');
         if(check_status != null){
             $('#but_checkin').hide();
