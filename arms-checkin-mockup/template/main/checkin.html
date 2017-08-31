@@ -12,7 +12,8 @@
             <label for="fastcode"></label>
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> </span>
-                <input class="form-control form-control-lg" id="fastcode" placeholder="Enter fast code" aria-describedby="fastcodeHelp" maxlength="4">
+                <input id="searchinput" type="search" class="w-100 form-control" id="fastcode" placeholder="Enter fast code" aria-describedby="fastcodeHelp" maxlength="4">
+                <span id="searchclear"  class="searchclear fa fa-2x fa-times"></span>
             </div>
             <small id="fastcodeHelp" class="form-text text-muted">Please Insert only 4 digit</small>
         </div>
@@ -33,6 +34,14 @@
 
          },1000)
 
+         $("#searchinput").on('keyup',function () {
+            $('#searchclear').toggle(Boolean($(this).val()));
+         });
+        $("#searchclear").toggle(Boolean($(".searchinput").val()));
+        $("#searchclear").on('click',function () {
+            $(this).prev().val('').focus();
+            $(this).hide();
+        });
      });
 
      $(function () {

@@ -25,7 +25,6 @@ function setPageName(page){
 }
 
 function setPageTitle(){
-    console.log("TEST");
     var title = $('#page_title').attr('name');
     document.title = title;
 }
