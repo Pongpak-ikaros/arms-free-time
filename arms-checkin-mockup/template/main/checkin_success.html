@@ -8,15 +8,26 @@
             <img src="../../assets/public/img/profile.png" class="profile rounded-circle img-thumbnail" alt="profile" />
             <p class="card-title">Mr. Mungming Nunrakk</p>
             <p class="card-text ">[ developer ]</p>
-            <p class="card-text "><small class="text-muted">Redirect in <a id="time_count">5</a>.. <br />If not redict please click</small></p>
+            <p class="card-text "><small class="text-muted">Redirect in <a id="time_count">5</a> Second <br />If not redict 
+                <a onClick="redirect();" href="#">please click</a></small></p>
         </div>
     </div>
 </div>
 
 <script>
   $(document).ready(function () {
-        // if(sessionStorage.getItem('page_name') == 'main/checkin'){
-        //     changePage('main/checkin_success'); 
-        // }
+    var fiveSeconds = new Date().getTime() + 5000;
+        $('#clock').countdown(fiveSeconds, {elapse: true}).on('update.countdown', function(event) {
+            var $this = $(this);
+            if (!event.elapsed) {
+                $('#time_count').html(event.strftime('%-S'));
+            } else {
+                changePage('main/checkin');
+            }
     });
+  });
+
+  function redirect(){
+    changePage('main/checkin');    
+  }
 </script>

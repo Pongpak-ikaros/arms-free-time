@@ -1,4 +1,5 @@
-    <div class='w-100 border rounded bg-info d-flex flex-column justify-content-center p-3'>
+    <div class="w-100 text-center pb-2"><h2>Reason</h2></div>
+    <div class='w-100 border rounded bg-info d-flex flex-column justify-content-center p-3 mb-3'>
         <div class='d-flex flex-wrap w-100 pl-5 pr-4 ml-4  pb-3'>
             <div class="w-25"> 
                 <label class="form-check-label">
@@ -64,10 +65,32 @@
         <div class='d-flex justify-content-center w-100'>
             <textarea class="w-100 rounded"></textarea>
         </div>
-        <div class='d-flex justify-content-center w-100 pt-3'>
-            <button type="button" class="btn btn-sm btn-warning btn-block">CHECK-IN</button>
+        <div class='d-flex flex-row w-100 pt-3'>
+            <button type="button" id="but_checkin" class="btn btn-sm btn-warning btn-block">CHECK-IN</button>
+            <button type="button" id="but_checkout" class="btn btn-sm btn-warning btn-block">CHECK-OUT</button>            
         </div>
         
-    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        var check_status = sessionStorage.getItem('chk_status');
+        if(check_status != null){
+            $('#but_checkin').hide();
+            $('#but_checkout').show();
+        } else {
+            $('#but_checkin').show();
+            $('#but_checkout').hide();
+        }
+
+        $('body').on('click','button',function(e){
+            var name = $(this).attr('id');
+            if(name == 'but_checkin'){
+                changePage('main/checkin_success');
+            } else if(name == 'but_checkout'){
+
+            }
+        });
+    });
+</script>
 
 
