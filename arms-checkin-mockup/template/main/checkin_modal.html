@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" id="but_checkin" class="btn btn-primary">Check In</button>
+                <button type="button" id="but_checkin_modal" class="btn btn-primary">Check In</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
@@ -24,7 +24,7 @@
 <script>
     $(document).ready(function () {
         if(sessionStorage.getItem('page_name') == 'main/checkin'){
-            $('body').on('click','#but_checkin',function(e){
+            $('body').on('click','#but_checkin_modal',function(e){
                 $('#loginModal').modal('hide');
                 $('#loginModal').on('hidden.bs.modal', function (e) {
                 changePage('main/reason'); 
