@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/public/css/bootstrap.css" rel="stylesheet">
 
     <!-- Awesome font CSS -->
     <link href="../assets/public/css/font-awesome.min.css" rel="stylesheet">
@@ -26,17 +26,18 @@
     <!-- Moment time JS -->
     <script src="../assets/public/js/moment.min.js" ></script>
 </head>
-<body>
-    <div class="container">
-        <div class="header mt-5"><img class="header-logo" src="../assets/public/img/arms-logo.png"></div>
-        <div id="root" class="d-flex justify-content-center mt-3"></div>
-    </div>
-</body>
 
+<!--<frameset cols = "15%,*">-->
+    <!--<frame name = "left" src = "/html/top_frame.htm" />-->
+    <!--<frame name = "center" src = "../template/main/log_in.html" />-->
 
-<script>
-    $(function () {
-        $("#root").load("./main/checkin.html");
-    });
-</script>
+    <!--&lt;!&ndash;<noframes>&ndash;&gt;-->
+        <!--&lt;!&ndash;<body>Your browser does not support frames.</body>&ndash;&gt;-->
+    <!--&lt;!&ndash;</noframes>&ndash;&gt;-->
+<!--</frameset>-->
+
+<frameset cols="15%,*" style="margin: 0px;padding: 0px;" class="bg-info">
+    <frame id="f_side_bar" src = "../template/main/side_bar_admin.html">
+    <frame id="f_login" src = "../template/login.html"   />1
+</frameset>
 </html>
