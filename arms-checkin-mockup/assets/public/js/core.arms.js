@@ -9,14 +9,15 @@ $(document).ready(function(){
         } else {
             changePage(page);
         }
-    }  
+    }      
 });
 
 function changePage(page){
-    $('#root').load('../template/'+page+'.html');
+    $('#root').load('../template/'+page+'.html',function(e){
+        setPageTitle();    
+    });
     setPageName(page);
-    setPageTitle();
-    saveStorage(page);    
+    saveStorage(page);  
 }
 
 function setPageName(page){
@@ -24,10 +25,9 @@ function setPageName(page){
 }
 
 function setPageTitle(){
-    $(document).ready(function(){
-        var title = $('#page_title').attr('name');
-        document.title = title;
-    });
+    console.log("TEST");
+    var title = $('#page_title').attr('name');
+    document.title = title;
 }
 function saveStorage(page){
     sessionStorage.setItem('page_name',page);    

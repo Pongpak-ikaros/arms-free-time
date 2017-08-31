@@ -24,7 +24,7 @@
             if (!event.elapsed) {
                 $('#time_count').html(event.strftime('%-S'));
             } else {
-                changePage('main/checkin');
+                redirect();
             }
     });
   });
