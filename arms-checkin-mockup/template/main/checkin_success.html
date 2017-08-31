@@ -1,3 +1,4 @@
+<div id="page_title" name="ARMS - CHECK-IN : SUCESSS"></div>
 <div class="container d-flex flex-column justify-content-center align-items-center w-100 rounded">
     <!--<div class="align-se header mt-5"><img class="header-logo" src="../assets/public/img/arms-logo.png"></div>-->
     <!--<div id="root" class="mt-3"></div>-->
@@ -16,13 +17,14 @@
 
 <script>
   $(document).ready(function () {
+    // Time (Now) + 5 Second (1 Sec : 1000 Milisec)
     var fiveSeconds = new Date().getTime() + 5000;
         $('#clock').countdown(fiveSeconds, {elapse: true}).on('update.countdown', function(event) {
             var $this = $(this);
             if (!event.elapsed) {
                 $('#time_count').html(event.strftime('%-S'));
             } else {
-                // changePage('main/checkin');
+                changePage('main/checkin');
             }
     });
   });
