@@ -1,0 +1,71 @@
+<div id="page_title" name="ARMS - CHECK-IN : Add New User"></div>
+<!--<div class="w-100 text-center pb-2"><h2>ADD NEW USER</h2></div>-->
+<div class='border border-dark rounded bg-light container-fluid p-3 '>
+    <div class="container-fluid">
+        <div class="text-left pb-2"><h2>LIST of USERS</h2></div>
+        <div class="container-fluid">
+            <div class="row content">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>LIST OF USERS</th>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Adrian Wattananupong</td>
+                        <td>2020.05.01</td>
+                        <td>Admin</td>
+                        <td>july@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Parima Laotrakool</td>
+                        <td>2020.05.01</td>
+                        <td>Active</td>
+                        <td>july@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Pongpich Nakages</td>
+                        <td>Dooley</td>
+                        <td>july@example.com</td>
+                        <td>july@example.com</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-100 text-right pt-2"><h4 id="reason_time_enter">MON 2017-08-24</h4></div>
+
+
+<script>
+    $(document).ready(function(){
+        if(sessionStorage.getItem('page_name') == 'main/list_of_users'){
+            $('#list_of_users_time_enter').html(sessionStorage.getItem('time_enter'));
+            var check_status = sessionStorage.getItem('chk_status');
+            if(check_status != null){
+                $('#but_checkin').hide();
+                $('#but_checkout').show();
+            } else {
+                $('#but_checkin').show();
+                $('#but_checkout').hide();
+            }
+
+            $('body').on('click','button',function(e){
+                var name = $(this).attr('id');
+                if(name == 'but_checkin'){
+                    changePage('main/checkin_success');
+                } else if(name == 'but_checkout'){
+
+                }
+            });
+        }
+    });
+</script>
+
+
