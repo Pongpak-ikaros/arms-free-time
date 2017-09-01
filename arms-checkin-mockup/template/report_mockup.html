@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/public/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Awesome font CSS -->
+    <link href="../assets/public/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../assets/public/css/arms.css" rel="stylesheet">
+    <!-- Custom core CSS -->
+    <link href="../assets/custom/css/custom.css" rel="stylesheet">
+
+    <!-- Jquery core JS -->
+    <script src="../assets/public/js/jquery.min.js" ></script>
+
+    <!-- Popper for Bootstrap JS -->
+    <script src="../assets/public/js/popper.min.js" ></script>
+
+    <!-- Bootstrap core JS -->
+    <script src="../assets/public/js/bootstrap.min.js" ></script>
+
+    <!-- Moment time JS -->
+    <script src="../assets/public/js/moment.min.js" ></script>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+<div align="right">
+    <h4>
+        <b>EN | JP |TH &nbsp;&nbsp;&nbsp;</b>
+    </h4>
+</div>
+
+<div class="container-fluid">
+    <div id="root" class="d-flex justify-content-center mt-3"></div>
+</div>
+
+</body>
+
+
+<script>
+    $(function () {
+        $("#root").load("./main/report.html");
+    });
+</script>
+
+</html>
