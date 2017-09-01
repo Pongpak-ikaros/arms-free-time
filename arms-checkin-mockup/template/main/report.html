@@ -48,10 +48,11 @@
                 <div class='col-sm-4'>
                     <div class="form-group">
                         <div class='input-group date'>
-                            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-                            <input type='date' class="form-control" />
+                            <!--<span class="input-group-addon"><span class="fa fa-calendar"></span></span>-->
+                            <input type='text' name="daterange" class="form-control" />
                         </div>
                     </div>
+
                 </div>
 
                 <label>&nbsp; ~ &nbsp;</label>
@@ -59,12 +60,17 @@
                 <div class='col-sm-4'>
                     <div class="form-group">
                         <div class='input-group date'>
-                            <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
-                            <input type='date' class="form-control" />
+                            <!--<span class="input-group-addon"><span class="fa fa-calendar"></span></span>-->
+                            <input type='text' name="daterange" class="form-control" />
                         </div>
                     </div>
                 </div>
+
+                <!--<input name="daterange" value="" />-->
+
             </div>
+
+            <!--<br>-->
 
             <div class="row">
 
@@ -229,13 +235,25 @@
     </div>
 
     <script>
-        $(function () {
+        jQuery(document).ready(function($) {
             if (!$("#optradio1").is(":checked")) {
                 $('#optradio1').prop('checked', true);
             }
+            $("#optradio2").click(function() {
+                $('#optradio1').prop('checked', false);
+            });
+            $("#optradio1").click(function() {
+                $('#optradio2').prop('checked', false);
+            });
             if (!$("#test1").is(":checked")) {
                 $('#test1').prop('checked', true);
             }
+
+            $('input[name="daterange"]').daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true,
+                    opens : "right"
+            });
         });
     </script>
 
