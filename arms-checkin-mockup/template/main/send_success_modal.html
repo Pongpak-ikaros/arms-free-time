@@ -1,0 +1,33 @@
+<!--<div class="modal" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!--<div class="modal-header">-->
+                <!--<h5 class="modal-title text-center w-100">Confirmation Box</h5>-->
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+                <!--<span aria-hidden="true">&times;</span>-->
+                <!--</button>-->
+            <!--</div>-->
+            <div class="modal-body text-center w-100">
+                <i class="fa fa-check-circle fa-4x text-success"></i>
+                <div class="font-weight-normal">Email already sent !</div>
+            </div>
+            <div class="fix-modal-footer justify-content-center">
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>-->
+                <button type="button" id="but_checkin_modal" class="btn btn-success">OK</button>
+            </div>
+        </div>
+    </div>
+<!--</div>-->
+<script>
+    $(document).ready(function () {
+        if(sessionStorage.getItem('page_name') == 'main/checkin'){
+            $('body').on('click','#but_checkin_modal',function(e){
+                sessionStorage.setItem('time_enter',moment().format('YYYY-MM-DD HH:mm:ss'));
+                $('#loginModal').modal('hide');
+                $('#loginModal').on('hidden.bs.modal', function (e) {
+                changePage('main/reason'); 
+                })
+            });
+        }
+    });
+</script>
