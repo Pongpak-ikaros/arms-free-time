@@ -7,25 +7,23 @@ $(document).ready(function(){
         if($.trim(page) < 1){
             changePage('main/login');
         } else {
-            changePage(page);
+            if(page != "main/login"){
+                changePage("main/panel");
+            } else {
+                changePage(page);
+            }
         }
+        console.log(page);
     }        
 });
 
 function changePage(page){
     $('#root').load('../template/'+page+'.html',function(e){
         setPageTitle();    
+        setPageName(page);
+        saveStorage(page); 
     });
-    setPageName(page);
-    saveStorage(page);  
-}
-
-function navbarChange(id,page){
-    $('#'+id).load('../template/'+page+'.html',function(e){
-        setPageTitle();    
-    });
-    setPageName(page);
-    saveStorage(page);  
+   
 }
 
 function setPageName(page){
