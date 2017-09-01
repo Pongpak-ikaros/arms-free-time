@@ -5,15 +5,23 @@ $(document).ready(function(){
         }
         var page = $('#page_name').attr('name');        
         if($.trim(page) < 1){
-            changePage('main/checkin');
+            changePage('main/login');
         } else {
             changePage(page);
         }
-    }      
+    }        
 });
 
 function changePage(page){
     $('#root').load('../template/'+page+'.html',function(e){
+        setPageTitle();    
+    });
+    setPageName(page);
+    saveStorage(page);  
+}
+
+function navbarChange(id,page){
+    $('#'+id).load('../template/'+page+'.html',function(e){
         setPageTitle();    
     });
     setPageName(page);

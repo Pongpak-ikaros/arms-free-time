@@ -1,4 +1,5 @@
 <div id="page_title" name="ARMS - CHECK-IN : Reason"></div>
+<div id="sidebar_nav" class=""></div>
 <div class="w-100 text-center pb-2"><h2>Reason</h2></div>
 <div class='w-100 border border-dark rounded bg-light  d-flex flex-column justify-content-center p-3 '>
     <div class='d-flex flex-wrap w-100 ml-4'>
@@ -76,26 +77,12 @@
 
 <script>
 $(document).ready(function(){
-    if(sessionStorage.getItem('page_name') == 'main/reason'){
-        $('#reason_time_enter').html(sessionStorage.getItem('time_enter'));
-        var check_status = sessionStorage.getItem('chk_status');
-        if(check_status != null){
-            $('#but_checkin').hide();
-            $('#but_checkout').show();
-        } else {
-            $('#but_checkin').show();
-            $('#but_checkout').hide();
-        }
-
-        $('body').on('click','button',function(e){
-            var name = $(this).attr('id');
-            if(name == 'but_checkin'){
-                changePage('main/checkin_success');
-            } else if(name == 'but_checkout'){
-
-            }
+    if($('#sidebar_nav').length){
+        $('#sidebar_nav').load('../template/navbar/side_bar.html',function(e){
+            $('#root').prependTo('#root_move');
+            $('#root_main').remove(); 
         });
-    }
+    } 
 });
 </script>
 

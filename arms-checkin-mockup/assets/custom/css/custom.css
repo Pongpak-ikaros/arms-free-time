@@ -10,7 +10,10 @@ body,html {
     , transparent 74%, rgba(1, 1, 1, .05) 75%, rgba(1, 1, 1, .05) 76%
     , transparent 77%, transparent);
     background-size:50px 50px;
-    
+}
+body , html{
+    min-height: 100% !important;
+    height: 100%;
 }
 .fixed-top-custom {
     position: fixed;

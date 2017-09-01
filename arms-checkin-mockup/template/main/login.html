@@ -1,0 +1,32 @@
+<div id="page_title" name="ARMS - CHECK-IN : Login"></div>
+ <div class="w-100 border border-dark p-4 rounded">
+     <div class="text-center"><h1>Login</h1></div>
+    <form>
+        <div class="form-group">
+            <label for="fastcode"></label>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> </span>
+                <input id="username" type="text" class="w-100 form-control" 
+                placeholder="Enter Username" maxlength="16">
+            </div>
+            <div class="input-group mt-2">
+                <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i> </span>
+                <input id="password" type="password" class="w-100 form-control"
+                placeholder="Enter Password" maxlength="16">
+            </div>
+            <!-- <small id="fastcodeHelp" class="form-text text-muted">Please Insert only 4 digit</small> -->
+        </div>
+        <button type="button" id="login" class="btn btn-primary btn-block">Enter</button>
+    </form>
+ </div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"  aria-hidden="true"></div>
+ <script>
+     $(document).ready(function () {
+         $('#login').click(function(){
+              changePage('main/panel');
+         });
+     });
+ </script>
+ 
