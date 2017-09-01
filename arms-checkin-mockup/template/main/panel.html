@@ -6,7 +6,8 @@ $(document).ready(function(){
         $('#sidebar_nav').load('../template/navbar/side_bar.html',function(e){
             document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed');
             $('#root').prependTo('#root_move');
-            $('#root').empty(); 
+            $('#root').empty();
+            $('#root_main').remove(); 
         });
         var page = $('#page_name').attr('name');
         if(page == 'main/panel'){
