@@ -153,3 +153,8 @@ input::-webkit-inner-spin-button {
     padding: 15px;
     /*border-top: 1px solid #e9ecef;*/
 }
+
+.more-less {
+    float: right;
+    color: #212121;
+}

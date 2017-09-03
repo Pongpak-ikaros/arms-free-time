@@ -1,5 +1,5 @@
 <div class="p-0 float-left w-100 nav-container d-flex flex-row">
-        <div class="sidebar w-25 bg-dark d-flex flex-column" id="sidebar">
+        <div class="sidebar w-25 bg-dark d-flex flex-column panel-group" id="sidebar">
             <div class="p-4 text-left d-flex flex-row justify-content-center">
                 <div><img class="border rounded-circle" src="../assets/public/img/human1.png" width="100"></div>    
                 <div class="pl-2 d-flex flex-column justify-content-center text-light text-center w-100">
@@ -8,11 +8,21 @@
                     <div>Administrator</div>
                 </div>      
                 <div class="d-flex flex-column justify-content-center text-light text-center w-25">
-                    <i class="fa fa-2x fa-cog" aria-hidden="true"></i>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cog fa-2x float-right" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Setting</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
                 </div>                    
             </div>
-            <div class="bg-light text-dark p-2 text-left" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Dashboard<i class="fa fa-spinner float-right pt-1" aria-hidden="true"></i>         
+            <div class="bg-light text-dark p-2 text-left panel-heading" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Dashboard<i class="fa fa-chevron-left float-right pt-1 more-less" aria-hidden="true"></i>
             </div>
             <div class="collapse" id="collapseExample">
                 <div class="text-light btn btn-sm p-0 m-0 w-100" data-toggle="collapse" >
@@ -22,8 +32,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-light text-dark p-2 text-left" data-toggle="collapse" href="#manage_user" aria-expanded="false" aria-controls="manage_user">
-                    Manager User<i class="fa fa-spinner float-right pt-1" aria-hidden="true"></i>        
+            <div class="bg-light text-dark p-2 text-left panel-heading" data-toggle="collapse" href="#manage_user" aria-expanded="false" aria-controls="manage_user">
+                    Manager User<i class="fa fa-chevron-left float-right pt-1 more-less" aria-hidden="true"></i>
             </div>
                 <div class="collapse" id="manage_user">
                     <div class="text-light btn btn-sm p-0 m-0 w-100" data-toggle="collapse" >
@@ -53,3 +63,15 @@
             </div>
         </div>
 </div>
+
+<script>
+
+    function toggleIcon(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find(".more-less")
+            .toggleClass('fa-chevron-left fa-chevron-down');
+    }
+    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+    $('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
