@@ -1,6 +1,6 @@
 <div id="page_title" name="ARMS - CHECK-IN : Add New User"></div>
 <!--<div class="w-100 text-center pb-2"><h2>ADD NEW USER</h2></div>-->
-<div class='border border-dark rounded bg-light container-fluid p-3 '>
+<div class='border border-dark rounded bg-light container-fluid p-3'>
     <div class="container-fluid">
         <div class="text-left pb-2"><h2>LIST of USERS</h2></div>
         <div class="container-fluid">
@@ -55,15 +55,6 @@
                 $('#but_checkin').show();
                 $('#but_checkout').hide();
             }
-
-            $('body').on('click','button',function(e){
-                var name = $(this).attr('id');
-                if(name == 'but_checkin'){
-                    changePage('main/checkin_success');
-                } else if(name == 'but_checkout'){
-
-                }
-            });
         }
     });
 </script>

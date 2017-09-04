@@ -18,6 +18,7 @@ $(document).ready(function(){
 });
 
 function changePage(page){
+    console.log(page);
     $('#root').load('../template/'+page+'.html',function(e){
         setPageTitle();    
         setPageName(page);
@@ -43,5 +44,4 @@ function sideBarControll(){
 
 function collapseMenu(menu){
     changePage('main/' + $(menu).attr('name'));
-    // console.log($(menu).attr('name'));
 }
