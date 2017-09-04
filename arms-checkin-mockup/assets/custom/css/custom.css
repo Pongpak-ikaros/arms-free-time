@@ -77,9 +77,6 @@ body , html{
     width: 100%;
 }
 
-.show-date-time{
-
-}
 
 .show-date-time > div{
     width: 100%;
@@ -156,4 +153,9 @@ input::-webkit-inner-spin-button {
 
 .w-40 {
     width: 40%;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
 }
