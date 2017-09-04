@@ -1,18 +1,27 @@
 <div id="page_title" name="ARMS - CHECK-IN : Reason"></div>
-<div id="sidebar_nav" class=""></div>
 <script>
 $(document).ready(function(){
     if($('#sidebar_nav').length){
         $('#sidebar_nav').load('../template/navbar/side_bar.html',function(e){
-            document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed');
+            sideBarControll();
             $('#root').prependTo('#root_move');
             $('#root').empty();
             $('#root_main').remove(); 
         });
         var page = $('#page_name').attr('name');
+        
         if(page == 'main/panel'){
             changePage("main/dashboard");
         }
+
+
+        $('body').on('click','button',function(e){
+            var name = $(this).attr('id');
+            if(name == 'btn-add-new-user'){
+                changePage('main/add_new_user');
+            } else if(name == 'but_checkout'){
+            }
+        });
     } 
 });
 </script>

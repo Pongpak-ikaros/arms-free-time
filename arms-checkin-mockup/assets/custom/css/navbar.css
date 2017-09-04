@@ -1,5 +1,9 @@
 .nav-container {
-    width: 100%;
+    float: left;
+    min-width: 600px;
+    padding: 10px;
+    height: 100vh;
+    overflow: auto;
 }
 @media (min-width: 1200px) {
     .nav-container {

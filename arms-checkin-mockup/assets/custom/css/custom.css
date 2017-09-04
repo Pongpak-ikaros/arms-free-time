@@ -13,7 +13,7 @@ body,html {
 }
 body , html{
     min-height: 100% !important;
-    height: 100%;
+    height: 100%!important;
 }
 .fixed-top-custom {
     position: fixed;
@@ -152,4 +152,8 @@ input::-webkit-inner-spin-button {
     justify-content: flex-end;
     padding: 15px;
     /*border-top: 1px solid #e9ecef;*/
+}
+
+.w-40 {
+    width: 40%;
 }

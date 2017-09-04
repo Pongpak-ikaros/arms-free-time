@@ -25,7 +25,6 @@ function changePage(page){
     });
    
 }
-
 function setPageName(page){
     $('#page_name').attr('name',page);
 }
@@ -36,4 +35,13 @@ function setPageTitle(){
 }
 function saveStorage(page){
     sessionStorage.setItem('page_name',page);    
+}
+
+function sideBarControll(){
+    document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed');
+}
+
+function collapseMenu(menu){
+    changePage('main/' + $(menu).attr('name'));
+    console.log($(menu).attr('name'));
 }
