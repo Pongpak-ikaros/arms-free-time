@@ -13,7 +13,7 @@ $(document).ready(function(){
                 changePage(page);
             }
         }
-        console.log(page);
+        // console.log(page);
     }        
 });
 
@@ -43,5 +43,5 @@ function sideBarControll(){
 
 function collapseMenu(menu){
     changePage('main/' + $(menu).attr('name'));
-    console.log($(menu).attr('name'));
+    // console.log($(menu).attr('name'));
 }
