@@ -151,11 +151,27 @@ input::-webkit-inner-spin-button {
     /*border-top: 1px solid #e9ecef;*/
 }
 
-.w-40 {
-    width: 40%;
+.w-15 {
+    width: 15%!important;
 }
 
+.w-30 {
+    width: 30%!important;
+}
+
+.w-40 {
+    width: 40%!important;
+}
+
+.w50 {
+    width: 50px;
+}
 .more-less {
     float: right;
     color: #212121;
+}
+
+input[type=file]{
+    width:90px;
+    color:transparent;
 }
